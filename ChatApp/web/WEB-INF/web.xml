@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Akhil Gupta
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL)
+ * This is available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/OSL-3.0  Open Software License (OSL)
+ *
+ * DISCLAIMER**
+ *
+ * @category   Simple JAVA Web CHAT APPLICATION
+ * @package    Simple JAVA Web CHAT APPLICATION
+ * @url       https://www.youtube.com/user/thisisakhilgupta/
+ * @author    Akhil Gupta
+ */
+-->
+
+<web-app version="2.4"
+	xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+	<servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Chat</servlet-name>
+    <servlet-class>com.chatting.Chat</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ChatStore</servlet-name>
+    <servlet-class>com.chatting.ChatStore</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ReloadData</servlet-name>
+    <servlet-class>com.chatting.ReloadData</servlet-class>
+  </servlet>
+
+
+
+  <servlet-mapping>
+    <servlet-name>Chat</servlet-name>
+    <url-pattern>/chat</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChatStore</servlet-name>
+    <url-pattern>/chatstore</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ReloadData</servlet-name>
+    <url-pattern>/reloaddata</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
